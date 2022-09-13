@@ -1,0 +1,105 @@
+body {
+  max-width: 850px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  font-size: 47px;
+  width: 100%;
+}
+h2 {
+  font-size: 37px;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  color: #4e5e6d;
+  font-family: Arial, Helvetica, sans-serif;
+}
+p {
+  display: block;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 350px;
+  color: #908c93;
+}
+.container {
+  box-shadow: 0px 30px 50px rgb(65 50 100 / 12%);
+  margin: 40px;
+  background-color: #d7d1d1;
+  border: 2px solid #908c93;
+  padding: 20px 20px;
+  border-radius: 10px;
+}
+
+.bg-image {
+  background-image: url(../images/clouds.jpg);
+  background-color: #cccccc;
+  height: 190px;
+  border-radius: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.bg-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: whitesmoke;
+}
+.form {
+  display: block;
+  text-align: center;
+}
+.text {
+  display: block;
+}
+
+.temperature {
+  font-size: 38px;
+  font-weight: bold;
+  color: #4e5e6d;
+  display: block;
+  text-align: center;
+
+}
+.units {
+  font-size: 13px;
+  color: #4e5e6d;
+  position: relative;
+  top: -50px;
+  left: 428px;
+}
+
+.containertext-center {
+  color: #908c93;
+  text-align: center;
+  font-size: 22px;
+}
+.row {
+  width: max-width;
+}
+
+button {
+  color: #4e5e6d;
+  font-size: 17px;
+  font-weight: 400;
+  background-color: rgb(211, 206, 206)148, 148, 148);
+  color: grey;
+  padding: 6px 12px;
+  border-radius: 5px;
+  border:none;
+}
+
+ul {
+  padding-left: 0;
+}
+li {
+  list-style: none;
+  font-size: 19px;
+  color: #908c93;
+  display: block;
+  text-align: left;
+}
