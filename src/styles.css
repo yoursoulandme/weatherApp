@@ -80,11 +80,11 @@ button {
   color: #4e5e6d;
   font-size: 17px;
   font-weight: 400;
-  background-color: rgb(211, 206, 206)148, 148, 148);
+  background-color: rgb(211, 206, 206);
   color: grey;
   padding: 6px 12px;
   border-radius: 5px;
-  border:none;
+  border: none;
 }
 ul {
   padding-left: 0;
