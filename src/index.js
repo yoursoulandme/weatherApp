@@ -92,5 +92,4 @@ let searchFormat = document.querySelector("#search-form");
 searchFormat.addEventListener("submit", searchTab);
 
 let buttonCurrentLocation = document.querySelector("#button-location");
-event.preventDefault();
 buttonCurrentLocation.addEventListener("click", getCurrentLocation);
