@@ -21,8 +21,29 @@ p {
   font-weight: 350px;
   color: #908c93;
 }
+button {
+  color: #54575a;
+  font-size: 17px;
+  font-weight: 400;
+  background-color: #ffffff;
+  color: grey;
+  padding: 6px 12px;
+  border-radius: 5px;
+  border: none;
+}
+ul {
+  padding-left: 0;
+}
+li {
+  list-style: none;
+  font-size: 19px;
+  color: #908c93;
+  display: block;
+  text-align: left;
+}
 .container {
   box-shadow: 0px 30px 50px rgb(65 50 100 / 12%);
+  max-width: 760px;
   margin: 40px;
   background-color: #e0dede;
   border: 1px solid #c8c5ca;
@@ -54,22 +75,26 @@ p {
 .text {
   display: block;
 }
+.weather-temp img {
+  margin-left: 220px;
+}
 .temperature {
-  font-size: 38px;
+  font-size: 44px;
   font-weight: bold;
   color: #505252;
   display: block;
   text-align: center;
+  margin-top: 15px;
 }
 .units {
   font-size: 19px;
   color: #4e5e6d;
   position: relative;
   top: -50px;
-  left: 428px;
+  left: 60px;
 }
 .containertext-center {
-  color: #908c93;
+  color: #5b5d5d;
   text-align: center;
   font-size: 22px;
 }
@@ -77,26 +102,6 @@ p {
   width: max-width;
 }
 .signature {
-  margin-top: -29px;
+  margin-top: -15px;
   margin-left: 47px;
-}
-button {
-  color: #54575a;
-  font-size: 17px;
-  font-weight: 400;
-  background-color: #ffffff;
-  color: grey;
-  padding: 6px 12px;
-  border-radius: 5px;
-  border: none;
-}
-ul {
-  padding-left: 0;
-}
-li {
-  list-style: none;
-  font-size: 19px;
-  color: #908c93;
-  display: block;
-  text-align: left;
 }
