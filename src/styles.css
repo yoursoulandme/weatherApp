@@ -1,5 +1,6 @@
 body {
   max-width: 850px;
+  background-color: #fbfbfb;
   font-family: Arial, Helvetica, sans-serif;
 }
 h1 {
@@ -42,10 +43,12 @@ li {
   text-align: left;
 }
 .container {
-  box-shadow: 0px 30px 50px rgb(65 50 100 / 12%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 20px 50px -30px,
+    rgba(5, 32, 79, 0.2) 0px -2px 6px 0px inset;
   max-width: 760px;
   margin: 40px;
-  background-color: #e0dede;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   border: 1px solid #c8c5ca;
   padding: 20px 20px;
   border-radius: 10px;
@@ -83,25 +86,44 @@ li {
   font-weight: bold;
   color: #505252;
   display: block;
-  text-align: center;
-  margin-top: 15px;
+  text-align: relative;
+  margin-top: 10px;
+}
+.currentTime {
+  color: #4e5e6d;
+}
+.highlightColor {
+  color: #4e5e6d;
 }
 .units {
-  font-size: 19px;
+  font-size: 16px;
   color: #4e5e6d;
   position: relative;
-  top: -50px;
+  top: -40px;
   left: 60px;
-}
-.containertext-center {
-  color: #5b5d5d;
-  text-align: center;
-  font-size: 22px;
 }
 .row {
   width: max-width;
 }
+.containertext-center {
+  color: #4e5e6d;
+  text-align: center;
+  font-size: 22px;
+}
 .signature {
   margin-top: -15px;
   margin-left: 47px;
+}
+.weather-temp .img {
+  width: 140px !important;
+  height: 140px !important;
+  margin-left: 100px;
+}
+.weather-temp .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+.weather-temp .active:hover {
+  text-decoration: none;
 }
