@@ -33,6 +33,58 @@ function formatDate(now) {
   }
   return ` ${day}, ${month} ${date} - ${hour}:${minute}`;
 }
+///Setting up the days for daily-forecast
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+///Setting up the row for weekly-forescast
+function displayForecast(response) {
+  let forecast = response.data.daily;
+
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
+          <div class="col-2">
+          <div class="weather-weekly-date">${formatDay(forecastDay.dt)}</div>
+            <img 
+              src="http://openweathermap.org/img/wn/${
+                forecastDay.weather[0].icon
+              }@2x.png"
+            alt=""
+            width="55"
+            />
+          <div class="weather-weekly-temp">
+            <span class="weather-weekly-temp-max">
+              ${Math.round(forecastDay.temp.max)}°
+            </span> 
+            <span class="weather-weekly-temp-min">
+              ${Math.round(forecastDay.temp.min)}°
+            </span>
+          </div>
+        </div>
+      `;
+    }
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+///API for daily forescast
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "5201594abea9f3e38b70e65b11a80c24";
+  let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(url).then(displayForecast);
+}
+
 ///Current Time
 let nowElement = document.querySelector("#now");
 let currentTime = new Date();
@@ -57,6 +109,8 @@ function displayWeatherCond(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
   CelsiusTemp = Math.round(response.data.main.temp);
+
+  getForecast(response.data.coord);
 }
 ////API connect
 function searchCity(cityName) {
@@ -86,6 +140,7 @@ function displayFahrenheitTemp(event) {
 }
 function displayCelsiusTemp(event) {
   event.preventDefault();
+
   celsiusLink.classList.add("acive");
   fahrenheitLink.classList.remove("active");
   let temperatureElement = document.querySelector("#temperature");
